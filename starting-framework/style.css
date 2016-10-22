@@ -1,0 +1,60 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.wrapper {
+  width: 600px;
+  margin: auto;
+}
+
+
+header {
+  height: 100px;
+  background-color: navy;
+  text-align: center;
+  color: gold;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  color: gold;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("http://images.techhive.com/images/article/2016/04/golden-state-warriors-logo-100656149-primary.idge.jpg")
+}
+
+footer {
+  height: 100px;
+  background-color: navy;
+  text-align: center;
+  color: gold;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: -16px;
+}
+
+#welcome-mat {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+#kdsteph {
+  width: 100%;
+  margin: auto;
+}
+
+a:link    { color: blue; }
+a:visited { color: red;   }
+a:hover   { color: green; }
+a:active  { color: pink;  }
