@@ -5,4 +5,3 @@ Galvanize. Bare with me now since I am an avid Warriors fan. You'll see for
 yourself.
 
 Cheers.
-# Galvanize-JS
