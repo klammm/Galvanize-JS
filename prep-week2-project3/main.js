@@ -64,7 +64,15 @@ while (i < 5) {
 //     Display in unique paragraphs the sentence "At home, I have _____ cats."
 //     The numbers should range from 10 to 110, in increments of 25.
 
+for (i = 10; i < 110; i += 25) {
+  document.getElementById("q5a").innerHTML += "<p>" + "At home, I have " + i + " cats." + "</p>";
+}
 
+var i = 10;
+while (i < 110) {
+  document.getElementById("q5b").innerHTML += "<p>" + "At home, I have " + i + " cats." + "</p>";
+  i += 25
+}
 
 
 
@@ -73,14 +81,31 @@ while (i < 5) {
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
 
-
+for (i = 0; i < numArray.length; i++) {
+  if (numArray[i] >= 10 && numArray[i] % 2 === 0) {
+    document.getElementById("q6").innerHTML += "<p> Even and greater than 10 </p>"
+  } else if (numArray[i] % 2 === 0) {
+    document.getElementById("q6").innerHTML += "<p> Even  </p>"
+  } else {
+    document.getElementById("q6").innerHTML += "<p> Odd </p>"
+  }
+}
 
 
 
 // 7. Using the following Array, create variable called numThrees with the value [13, 23, 33, 43, 53, 63, 73]
 var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 65, 67, 73, 75, 77];
 
+var numThrees = [];
+for (i = 0; i < numArray.length; i++) {
+  var numString = numArray[i].toString();
+  if (numString[1] === "3") {
+    parseInt(numString);
+    numThrees.push(numString);
+  }
+}
 
+document.getElementById('q7').innerHTML = "numThrees: [" + numThrees + "]";
 
 
 
@@ -94,8 +119,11 @@ var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 
 // #####
 // ######
 // #######
-
-
+var hashCount = "" ;
+for (i = 0; i < 7; i++) {
+  hashCount += "#";
+  document.getElementById("q8").innerHTML += "<br> " + hashCount
+}
 
 
 
@@ -107,7 +135,17 @@ var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 
 // If the number is divisible by 5, print "Buzz" instead of the number.
 // If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
 
-
+for (i = 1; i < 101; i++) {
+  if (i % 5 === 0 && i % 3 === 0) {
+    document.getElementById('q9').innerHTML += "<p> FizzBuzz </p>";
+  } else if (i % 5 === 0) {
+    document.getElementById("q9").innerHTML += "<p> Buzz </p>";
+  } else if (i % 3 === 0) {
+    document.getElementById("q9").innerHTML += "<p> Fizz </p>";
+  } else {
+    document.getElementById("q9").innerHTML += "<p>" + i + "</p>";
+  }
+}
 
 
 
@@ -130,6 +168,43 @@ var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 
 //     to print a snarky message to the console if the input doesn't match any of the options.
 
 
+var winningMessage = "Result: You win! You get a prize of nothing!";
+var losingMessage = "Result: You lose. Try again. Maybe you might win?"
+
+
+document.getElementById("begin").addEventListener("click", function() {
+  var human = document.getElementById("roshambo").value;
+  var computer = Math.random();
+  if (computer < 0.34) {
+    var computerChoice = "rock";
+    document.getElementById("computer-choice").innerHTML = "Computer's choice: " + computerChoice
+  } else if (computer > 0.34 && computer < 0.67) {
+    var computerChoice = "paper";
+    document.getElementById("computer-choice").innerHTML = "Computer's choice: " +computerChoice
+  } else {
+    var computerChoice = "scissors";
+    document.getElementById("computer-choice").innerHTML = "Computer's choice: " +computerChoice
+  }
+
+  if (human === computerChoice) {
+    document.getElementById('winner').innerHTML = "Result: It's a draw. I guess nothing ever happened then."
+  } else if (human === "scissors" && computerChoice === "rock") {
+    document.getElementById('winner').innerHTML = losingMessage
+  } else if (human === "rock" && computerChoice === "scissors") {
+    document.getElementById('winner').innerHTML = winningMessage
+  } else if (human === "rock" && computerChoice === "paper") {
+    document.getElementById('winner').innerHTML = losingMessage
+  } else if (human === "paper" && computerChoice === "rock") {
+    document.getElementById('winner').innerHTML = winningMessage
+  } else if (human === "paper" && computerChoice === "scissors") {
+    document.getElementById('winner').innerHTML = losingMessage
+  } else if (human === "scissors" && computerChoice === "paper") {
+    document.getElementById('winner').innerHTML = winningMessage
+  } else {
+    document.getElementById('winner').innerHTML = "Result: You smartass. Play again and this time, play by the rules."
+  }
+})
+
 
 
 
@@ -139,7 +214,14 @@ var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 
 // 16. Write a conditional statement to find the largest of the numbers in the array provided.
 var largestNum = [-5, -2, -6, 0, -1]
 
+var largest = 0;
+for (i = 0; i < largestNum.length; i++) {
+  if (largest < largestNum[i]) {
+    largest = largestNum[i]
+  }
+}
 
+document.getElementById('q16').innerHTML = "The largest number is: " + largest;
 
 
 // HEADS OR TAILS?
@@ -150,16 +232,25 @@ var largestNum = [-5, -2, -6, 0, -1]
 //     Calling Math.floor on that number will truncate the decimal, and give you a
 //     random number within the bounds of your array. (In this case, our array will only contain two items.)
 
-
-
-
-
+console.log(coin)
 
 // 18. Use a do/while loop to keep flipping the coin until you get tails.
 
+var i = 0;
+var coinSide = "heads";
 
+// The while loop will stop running if the argument is false.
+while (coinSide === "heads") {
+  var coin = Math.floor(Math.random() * 2);
+  if (coin === 0) {
+    coinSide = "heads"
+  } else {
+    coinSide = "tails"
+  }
+  i++
+}
 
-
+document.getElementById("q18").innerHTML +=  "<p> It took us " + i + " tries to get tails!</p>";
 
 
 // CHESS BOARD
@@ -177,6 +268,30 @@ var largestNum = [-5, -2, -6, 0, -1]
 //  # # # #
 // # # # #
 
+var lineCount = 1;
+
+for (i = 0; i < 8; i++) {
+  var chessLine = "";
+  if (lineCount % 2 === 0) {
+    for (j = 0; j < 8; j++) {
+      if (j % 2 === 0) {
+        chessLine += "#"
+      } else {
+        chessLine += "&nbsp;"
+      }
+    }
+  } else {
+    for (j = 0; j < 8; j++) {
+      if (j % 2 === 0) {
+        chessLine += "&nbsp;"
+      } else {
+        chessLine += "#"
+      }
+    }
+  }
+  document.getElementById('q19').innerHTML += "<br>" + chessLine
+  lineCount++
+}
 
 
 
@@ -185,7 +300,45 @@ var largestNum = [-5, -2, -6, 0, -1]
 // 20. When you have a program that generates this pattern, define a variable size = 8 and change the program
 // sso that it works for any size, outputting a grid of the given width and height.
 
+//  # # # #
+// # # # #
+//  # # # #
+// # # # #
+//  # # # #
+// # # # #
+//  # # # #
+// # # # #
 
+document.getElementById('chess-button').addEventListener("click", function() {
+  document.getElementById('q20').innerHTML = ""
+  var lineCount = document.getElementById('height').value;
+  var chessWidth = document.getElementById('width').value;
+  var count = 1;
+
+  for (i = 0; i < lineCount; i++) {
+    var chessLine = "";
+    if (count % 2 === 0) {
+      for (j = 0; j < chessWidth; j++) {
+        if (j % 2 === 0) {
+          chessLine += "#"
+        } else {
+          chessLine += "&nbsp;"
+        }
+      }
+    } else {
+      for (j = 0; j < chessWidth; j++) {
+        if (j % 2 === 0) {
+          chessLine += "&nbsp;"
+        } else {
+          chessLine += "#"
+        }
+      }
+    }
+    document.getElementById('q20').innerHTML += "<br>" + chessLine
+    count++
+  }
+
+})
 
 
 
