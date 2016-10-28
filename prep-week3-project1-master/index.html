@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="155 characters of call to action">
+    <title>JS Exercises - Week 3</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <header>
+        <h1 class="center">JS Exercises</h1>
+        <h2 class="center">Functions</h2>
+    </header>
+    <main>
+
+        <h2>Question 0:</h2>
+        <p>Status of JS page Connected: <span id="q0" class="status-bad">NOT connected properly</span></p>
+        <hr>
+
+
+
+      <h2>Question 1:</h2>
+        <p>Q: Create a function that simply returns a string that says something funny
+            when it is called and then displayed into the HTML page.
+        </p>
+        <p>
+          <button id="joke">Want to hear a joke?</button>
+          <span id="q1"></span>
+        </p>
+        <hr>
+
+
+        <h2>Question 2:</h2>
+        <p>Q: Define a function called "divideByTwo".
+        <br>    It should accept one parameter within a text field called "number" and
+        <br>    submitted when a button is clicked.
+        <br>    The function should divide the number by two and
+        <br>    then displayed into the HTML page.</p>
+
+        <p>
+          <form name="form2">
+            Please input a number to divide by two.
+            <br><input type="text" id="user-number">
+          </form>
+        <p><button id="divide-button">Hit me if you wanna divide by two!</button></p>
+
+
+          <span id="q2"></span>
+        </p>
+        <hr>
+
+
+        <h2>Question 3:</h2>
+        <p>Q: Define a function called "greeting".
+        <br>    It should accept two parameters within input fields, which will both be first names.
+        <br>    The function should display to the HTML page a greeting to both people.</p>
+        <p>
+          <form name="q3-form-a">
+            Please input your first name.
+            <br><input type="text" id="first-name">
+          </form>
+          <form name="q3-form-b">
+            Please input your friend's first name.
+            <br><input type="text" id="second-name">
+          </form>
+          <br><button id="greeting-button">Click me if you want to be greeted, Almighty Overlord!</button>
+
+          <br><br><span id="q3"></span>
+        </p>
+        <hr>
+
+
+        <h2>Question 4:</h2>
+        <p>Q: Create a function that finds the average of 6 numbers passed in when called
+            and returns the value and is then displayed in the HTML page. </p>
+        <form name="q4-form">
+          Please input 6 values to find the average.
+          <br>1.
+          <br><input type="text" id="first-number">
+          <br>2.
+          <br><input type="text" id="second-number">
+          <br>3.
+          <br><input type="text" id="third-number">
+          <br>4.
+          <br><input type="text" id="fourth-number">
+          <br>5.
+          <br><input type="text" id="fifth-number">
+          <br>6.
+          <br><input type="text" id="sixth-number">
+        </form>
+        <br><br> <button id="average-button">Let's find the average, human.</button>
+        <p><span id="q4"></span>
+        </p>
+        <hr>
+
+
+        <h2>Question 5:</h2>
+        <p>Q: 5. You use Amazon Subscribe & Save to have six cans of cashews automatically sent to you each month.
+        <br>    Write a function that takes the price per unit and calculates the total for you each month.
+        <br>    Since the price of the cashews can change anytime, pass that amount into the function to get your total price.</p>
+        <p>
+          <form name="q5-form">
+            Please input the price of your cashews per unit.
+            <br><input type="text" id="price-value">
+          </form>
+          <br><br><button id="price-button">Want to know the price of your cashews times 6 is?</button>
+        </p>
+
+        <p>
+          <span id="q5"></span>
+        </p>
+        <hr>
+
+
+        <h2>Question 6:</h2>
+        <p>Q: Define functions called "area" and "perimeter". They should both accept two parameters and calculate the area and perimeter of a rectangle.</p>
+        <p>
+          <form name="q6-form">
+            Please input the width.
+            <br><input type="number" id="width" min="0">
+            <br><br>Please input the height.
+            <br><input type="number" id="height" min="0">
+          </form>
+          <p>
+            <button id="area-button">Click me if you want the area of your rectangle!</button>
+          </p>
+          <p>
+            <button id="perimeter-button">Click me if you want the perimeter of your rectangle!</button>
+          </p>
+          <span id="q6"></span>
+        </p>
+        <hr>
+
+
+        <h2>Question 7:</h2>
+        <p>Q: 7. Define a function called "quarter". It accepts one parameter called "number".
+        <br>    The function will return a value which is one quarter of the number provided.</p>
+        <p>
+          <form name='q7-form'>
+            Please input a number.
+            <br><input type='number' id='quarter' min='0'>
+          </form>
+          <br><br><button id='quarter-button'>Quarterify</button>
+          <br><span id="q7"></span>
+        </p>
+        <hr>
+
+
+        <h2>Question 8:</h2>
+        <p>Q: Write a function called "sleepings", it should accept one parameter, an integer called "hours".
+        <br>    Write a conditional statement inside of the function. If the number of hours is more than 8, display a statement to the HTML page about getting enough rest.
+        <br>    If the number of hours is less than 8, print a statement recommending the user get more shut eye.</p>
+        <p>
+          <form name='q8-form'>
+            How much sleep did you get last night?
+            <br><input type="number" id= "sleep-hours" min='0' max="24">
+          </form>
+          <p>
+            <button id="sleep-button">Click here to get judged!</button>
+          </p>
+        </p>
+
+        <p>
+          <span id="q8"></span>
+        </p>
+        <hr>
+
+
+        <h2>Question 9:</h2>
+        <p>Q: Develop a function that determines a person's age by asking them for their birth year.</p>
+        <p>
+          <h3>Hey so what year were you born? For a friend....</h3>
+          <form name="q9-form">
+            <input type="number" id="year" min="1900" max="2016">
+          </form>
+          <br><button id="year-button">Let's see how old you are!</button>
+        </p>
+        <p><span id="q9"></span></p>
+        <hr>
+
+
+        <h2>Question 10:</h2>
+        <p>Q: Write a function that accepts the following array and separates the people into two teams. Display each team within the HTML page.
+        <br>    No names next to each other in the array should be on the same team.
+            <br> teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.", "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"]</p>
+        <p><span id="q10"></span></p>
+		    <hr>
+
+        <h2>Question 11:</h2>
+        <p>Q: Allow a user to enter a three digit number.
+        <br>     Write a function that adds the numbers together.
+        <br>     Hint #1: You need to turn a string into an integer.
+        <br>     Hint #2: Strings can be treated as arrays too.</p>
+        <p>
+          <form name="q11-form">
+            Put in any three or more digit number and I'll add up the digits for you.
+            <br><input type="text" id="digit-value">
+          </form>
+        </p>
+        <p>
+          <button id="digit-button">Be jealous of my math skills now.</button>
+        </p>
+        <p><span id="q11"></span></p>
+        <hr>
+
+        <h2>Question 12:</h2>
+        <p>Q: You've finally gotten around to counting the change in your piggy bank.
+        <br>     Write a function that accepts four parameters from a user (quarters, dimes, nickels, and pennies).
+        <br>     The function should take each number of coins and multiply it times each coin's value.
+        <br>     Finally, it should return the total amount of change you have in the following format: "$32.77"
+        <br>     HINT: Understanding the toFixed method will help you with the format.</p>
+        <p>
+          <form name="q12-form">
+            Please tell us how much change you have. No, we will not ask for spare change.
+            <br><strong> Please indicate in coin amounts.</strong>
+            <br>Quarters:
+            <br><input type="number" id="quarter-value" min="0">
+            <br>Dimes:
+            <br><input type="number" id="dime-value" min="0">
+            <br>Nickels:
+            <br><input type='number' id='nickel-value' min="0">
+            <br>Pennies:
+            <br><input type='number' id='penny-value' min="0">
+          </form>
+        </p>
+        <p>
+          <button id="change-button">What I stand for? CHANGE.</button>
+        </p>
+        <p><span id="q12"></span></p>
+        <hr>
+
+        <h2>Advanced Track<br>Question A:</h2>
+        <p>Q: Develop a function that cleans up a phone number entered by a user.
+        <br>     The rules are as follows:
+        <br>        If the phone number is less than 10 digits or more than 11 digits, assume that it is bad number
+        <br>        If the phone number is 10 digits assume that it is good
+        <br>        If the phone number is 11 digits and the first number is 1, trim the 1 and use the last 10 digits
+        <br>        If the phone number is 11 digits and the first number is not 1, then it is a bad number.
+        <br>        HINT: You may need to use the charAt method.</p>
+        <p>
+          <form name="qa-form">
+            Please input your phone number. Be sure not to include any parenthesis or dashes. Just numbers. Make it easier on a programmer, will ya?
+            <br><input type="text" id='tele-number'>
+          </form>
+        </p>
+        <p>
+          <button id='tele-button'>Now let's see if you were messing with me or not.</button>
+        </p>
+        <p><span id="qa"></span></p>
+		    <hr>
+
+        <h2>Question B:</h2>
+        <p>Q: Create a function that determines whether a parameter is a number or not.
+        <br>     Iterate over the elements in the following array to determine if each is a number.
+        <br>     HINT: You may need to use the isNaN method. arrayOfAllTheThings = ["one", 23, {thingsWhalesLove: "beaches"}, "six hundred", 33, 6834, "5,435"]</p>
+        <p><span id="qb"></span></p>
+        <hr>
+
+        <h2>Question C:</h2>
+        <p>Q: Create a die rolling function that accepts no parameters.
+        <br>     It rolls two six-sided-dice, adds the two numbers together, and returns a roll value.
+        <br>     Display the result in the HTML page.
+        <br>     To get the random number rolled by each die, use Math.random and Math.floor.</p>
+        <p>
+          <button id="roll-button">Click me to roll the dice....for your life.</button>
+        </p>
+        <p><span id="qc"></span></p>
+		    <hr>
+
+        <h2>Question D:</h2>
+        <p>Q: Using your die roll function above, figure out how many times it would take a user
+        <br>     to get around a Monopoly board once. A monopoly board has 40 spaces total.</p>
+        <p><span id="qd"></span></p>
+        <hr>
+
+
+        <h2>Question E:</h2>
+        <p>Q: Write a function that takes a year from a user
+        <br>    and reports whether or not it is a leap year.
+        <br>    Display the result in the HTML page.
+        <br>    Remember, a leap year occurs:
+        <br>        On every year that is evenly divisible by 4
+        <br>        Except every year that is evenly divisible by 100
+        <br>        Unless the year is also evenly divisible by 400
+        <br>        For example, 1997 is not a leap year, but 1996 is. 1900 is not a leapyear, but 2000 is.</p>
+        <p>
+          <form name="qe-form">
+            Please input a year, and we'll find out if it's a leap year or not.
+            <br><input type="number" id="leap-value">
+          </form>
+        </p>
+        <p>
+          <button id="leap-button">We'll do what Google can already do for you!</button>
+        </p>
+
+        <p><span id="qe"></span></p>
+        <hr>
+
+
+
+    </main>
+
+<script src="main.js"></script>
+</body>
+
+</html>
