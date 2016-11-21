@@ -10,7 +10,6 @@
 
 // Add your JS here.
 
-
 $(document).ready(function() {
 
 
