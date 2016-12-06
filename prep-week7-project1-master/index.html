@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta>
+    <title>OMDB Project</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Font+Name">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+  <main>
+    <h1>K.Lam's MovieLand!</h1>
+    <h3><i>Check out all my favorite movies</i></h3>
+    <h6>Go ahead and give each of the images a click. Click each movie to see an IMDB review and see how my movie choice is so basic.</h6>
+    <div id="result" class="hide">
+
+      <!-- Lord of the Rings -->
+      <div id='lotr' class="hide buttons">
+        <div>
+          <btn id="lotr-1" type='button' class="btn btn-primary">Fellowship of the Ring</button>
+        </div>
+        <div>
+          <btn id="lotr-2" type='button' class="btn btn-success">The Two Towers</button>
+        </div>
+        <div>
+          <btn id="lotr-3" type='button' class='btn btn-warning'>The Return of the King</button>
+        </div>
+      </div>
+
+      <!-- Marvel Universe -->
+      <div id="marvel" class="hide buttons">
+        <div>
+          <btn id="spiderman" type='button' class='btn btn-primary'>The Amazing Spiderman</button>
+        </div>
+        <div>
+          <btn id="x-men" type='button' class="btn btn-success">X-Men: Apocalypse</button>
+        </div>
+        <div>
+          <btn id="avengers" type='button' class="btn btn-warning">Avengers</button>
+        </div>
+        <div>
+          <btn id="guardians" type='button' class='btn btn-danger'>Guardian's of the Galaxy</button>
+        </div>
+      </div>
+
+      <!-- Result Image -->
+      <img id="target" src="" />
+    </div>
+    <p>
+      <img id="lotr-cover" src="http://vignette1.wikia.nocookie.net/lotr/images/8/87/Ringstrilogyposter.jpg/revision/latest/scale-to-width-down/270?cb=20070806215413">
+    </p>
+    <p>
+      <img id="marvel-cover" src="https://static1.squarespace.com/static/5031788c24ac2660dcea339c/t/556ca0ebe4b03a73f671981b/1433182446056/?format=750w">
+    </p>
+  </main>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.buttons {
+  text-align: center;
+}
+
+#target {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h3 {
+  font-family: 'Lobster', cursive;
+  color: maroon;
+}
+
+body {
+  text-align: center;
+}
