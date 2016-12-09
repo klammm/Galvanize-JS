@@ -7,6 +7,7 @@ $(document).ready(function(){
   wheel.colors = colorpalette.hotaru;
   wheel.createWheel(["Random", "Color", "Name", "ID"]);
   wheel.navItems[0].navigateFunction = function () {
+    console.log('suhh dude')
     $('#result').empty()
     $('#buttons').empty().append('<div class="btn btn-success" id="random" onclick="randomPoke();">Give me a random Pokemon!</div>')
     // '<div class="btn btn-success hidden" id="random" onclick="randomPoke();">Give me a random Pokémon!</div>'
@@ -66,8 +67,40 @@ function colorPoke() {
       $('#result').empty()
       $('#result').append('<ul id="result-color"></ul>')
       for (i = 0; i < 10; i++) {
-        $('#result-color').append('<li>' + data['pokemon_species'][i]['name'] + '</li>')
+        $('#result-color').append('<li id="color' + i + '">' + data['pokemon_species'][i]['name'] + '</li>')
       }
+
+
+      for (j = 0; j < 10; j++) {
+        function clicks(j) {
+          $('#color' + j).click(function() {
+            console.log('#color' + j)
+            console.log(data['pokemon_species'][j]['name'])
+            var $xhr = $.getJSON('http://pokeapi.co/api/v2/pokemon/' + data['pokemon_species'][j]['name']);
+
+            $xhr.done(function(data) {
+              if ($xhr.status !== 200) {
+                return;
+              }
+
+              // Display a pokemon's name, height, weight, and image
+              $('#result').empty()
+              $('#result').append('<p>Pokemon: ' + data['name'] + '</p>')
+              $('#result').append('<p>Height: ' + data['height'] + '</p>')
+              $('#result').append('<p>Weight: ' + data['weight'] + '</p>')
+              $('#result').append('<p>ID: ' + data.id + '</p>')
+              $('#result').append('<img src="' + data.sprites.front_default + '" />')
+            });
+
+            $xhr.fail(function(err) {
+              console.log(err);
+            });
+          })
+        }clicks(j)
+
+        console.log(j)
+      }
+
   });
 
   $xhr.fail(function(err) {
